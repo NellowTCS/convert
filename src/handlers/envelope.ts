@@ -89,7 +89,7 @@ class envelopeHandler implements FormatHandler {
 
     if (outputFormat.internal !== "html") throw "Invalid output format.";
 
-    let parser;
+    let parser: (bytes: Uint8Array) => Promise<string>;
     switch (inputFormat.internal) {
       case "odt": parser = parseODT; break;
       case "odp": parser = parseODP; break;
