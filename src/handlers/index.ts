@@ -1,6 +1,7 @@
 import type { FormatHandler } from "../FormatHandler.ts";
 
 import canvasToBlobHandler from "./canvasToBlob.ts";
+import meydaHandler from "./meyda.ts";
 import FFmpegHandler from "./FFmpeg.ts";
 import pdftoimgHandler from "./pdftoimg.ts";
 import ImageMagickHandler from "./ImageMagick.ts";
@@ -11,6 +12,7 @@ import qoiFuHandler from "./qoi-fu.ts";
 
 const handlers: FormatHandler[] = [
   new canvasToBlobHandler(),
+  new meydaHandler(),
   new FFmpegHandler(),
   new pdftoimgHandler(),
   new ImageMagickHandler(),
